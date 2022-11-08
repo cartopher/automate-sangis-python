@@ -2,7 +2,7 @@
 Manually downloading countless files onto our operating systems is repetitive, inefficient, and expensive. But it doesn't have to be that way. Python offers a way to cut costs considerably by streamlining and automating these time-consuming processes. In this demonstration, I outline how to use Python's `twill` package to access and navigate the SanGIS/SANDAG GIS Data Warehouse website so we can download and extract multiple ZIP files to our operating system. While at the same time, we automate how we want our output directories structured each time we run the program, making it easy to locate the files we are looking for, lending itself nicely to code reproducibility. The script below is modularized and thoroughly explains how each process is executed so that you can quickly learn how to implement it into your project activities.
 
 ### Overview of twill's Python API ###  
-The Python package twill, is based on requests and lxml packages and is described as a simplified scripting language developed for programmatic or automated website navigation through a command-line interface. You may use twill to navigate websites that employ forms, cookies, and other standard Web features. Moreover, twill provides excellent support for both MySQL and PostgreSQL database management tasks.
+The Python package twill, is based on `requests` and `lxml` packages and is described as a simplified scripting language developed for programmatic or automated website navigation through a command-line interface. You may use twill to navigate websites that employ forms, cookies, and other standard Web features. Moreover, twill provides excellent support for both MySQL and PostgreSQL database management tasks.
 
 For more about the 'twill' package, see:  
 twill Project Description (https://pypi.org/project/twill/)  
@@ -29,7 +29,7 @@ __1.__ Download `automate-sangis-python` repository (ZIP) to your preferred dire
 - This repository contains all the modules to run the automation process and a file called `environment.yml`, which includes the instructions to install the environment. 
 
 __2.__ Open the Anaconda Terminal on your computer.
-- To create the environment required to run this project, you must set your directory to where you downloaded the automate-sangis-python project using cd to change directories. 
+- To create the environment required to run this project, you must set your directory to where you downloaded the `automate-sangis-python` project using cd to change directories. 
 
 __3.__ In the Terminal, set your directory using cd to change directories (e.g., ` cd C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main`). 
 
