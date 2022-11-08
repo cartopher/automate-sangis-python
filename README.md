@@ -25,10 +25,11 @@ conda list
 ````
 To download the automate-sangis-python repository and install the downloadsangis environment, you will need to follow these steps: 
 
-__1.__ Download `automate-sangis-python` repository (ZIP) to your preferred directory. 
+__1.__ Download `automate-sangis-python` repository (ZIP) to your preferred directory and extract its contents. 
 - This repository contains all the modules to run the automation process and a file called `environment.yml`, which includes the instructions to install the environment. 
 
 __2.__ Open the Anaconda Terminal on your computer.
+- To create the environment required to run this project, you must set your directory to where you downloaded the automate-sangis-python project using cd to change directories. 
 
 __3.__ In the Terminal, set your directory using cd to change directories (e.g., ` cd C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main`). 
 
