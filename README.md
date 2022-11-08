@@ -71,13 +71,13 @@ Upon completing the following steps, you have successfully downloaded the entire
 __Important__: There are a few instances you should keep in mind about the child output directories.  
   
   
-__1.__ The "date-stamped" output directory is generated and named after the year and month in which the main module is executed (for example, __2022_09__), this means a new date-stamped output directory will be created and named after every month.
+__1.__ The "date-stamped" output directory is generated and named after the year and month in which the main module is executed (for example, `2022_09`), this means a new date-stamped output directory will be created and named after every month.
 
-__2.__ In the case of the __'Current'__ output directory, the extracted contents from the previous download month are replaced every month; however, this occurs only if the extracted files have the same name.
+__2.__ In the case of the `Current` output directory, the extracted contents from the previous download month are replaced every month; however, this occurs only if the extracted files have the same name.
 
-__3.__ Lastly, if for any reason the main module is ran more than once a month, all downloaded files with the same name in both the __'YYYY_MM'__ and __'Current'__  output directories will be overwritten.
+__3.__ Lastly, if for any reason the main module is ran more than once a month, all downloaded files with the same name in both the `YYYY_MM` and `Current`  output directories will be overwritten.
 
-In short, __*every month*__, we want to __*archive*__ the previous months __*unextracted*__ zipped files in a __*YYYY_MM*__ output directory, and we want to __*overwrite*__ the __*extracted*__ contents in the __'Current'__ output directory.
+In short, __*every month*__, we want to __*archive*__ the previous months __*unextracted*__ zipped files in a `YYYY_MM` output directory, and we want to __*overwrite*__ the __*extracted*__ contents in the `Current` output directory.
 
 This might not be very clear now, but it will make more sense after we review the entire program's functionality below. 
 
