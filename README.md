@@ -40,3 +40,5 @@ __5.__ Confirm the environment was created by printing a list of all conda envir
 __6.__ Once the environment is installed, you can activate it by running: `conda activate downloadsangis`. 
 
 __7.__ View a list of all Python packages installed in this environment, run: `conda list`.
+
+Upon completing the following steps, you have successfully downloaded the entire repository and created an environment containing the `twill` package and all of its dependencies to execute the code successfully. 
