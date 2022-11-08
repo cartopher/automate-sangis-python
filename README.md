@@ -25,18 +25,18 @@ conda list
 ````
 To download the automate-sangis-python repository and install the downloadsangis environment, you will need to follow these steps: 
 
-__1.__ Download 'automate-sangis-python' repository (ZIP) to your preferred directory. 
-- This repository contains all the modules to run the automation process and a file called 'environment.yml,' which includes the instructions to install the environment. 
+__1.__ Download `automate-sangis-python` repository (ZIP) to your preferred directory. 
+- This repository contains all the modules to run the automation process and a file called `environment.yml`, which includes the instructions to install the environment. 
 
 __2.__ Open the Anaconda Terminal on your computer.
 
-__3.__ In the Terminal, set your directory using cd to change directories (e.g., C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main). 
+__3.__ In the Terminal, set your directory using cd to change directories (e.g., `C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main`). 
 
 __4.__ Once you are in the directory, you can create your environment. To do this run: 
-conda env create -f environment.yml. 
+`conda env create -f environment.yml`. 
 
-__5.__ Confirm the environment was created by printing a list of all conda environments available on your machine by running: conda env list. 
+__5.__ Confirm the environment was created by printing a list of all conda environments available on your machine by running: `conda env list`. 
 
-__6.__ Once the environment is installed, you can activate it using:  conda activate downloadsangis. 
+__6.__ Once the environment is installed, you can activate it by running: `conda activate downloadsangis`. 
 
-__7.__ View a list of all Python packages installed in this environment, run: conda list.
+__7.__ View a list of all Python packages installed in this environment, run: `conda list`.
