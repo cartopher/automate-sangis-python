@@ -23,7 +23,7 @@ conda env list
 conda activate sangisdownload
 conda list
 ````
-To download the automate-sangis-python repository and install the downloadsangis environment, you will need to follow these steps: 
+To download the `automate-sangis-python` repository and install the `downloadsangis` environment, you will need to follow these steps: 
 
 __1.__ Download `automate-sangis-python` repository (ZIP) to your preferred directory and extract its contents. 
 - This repository contains all the modules to run the automation process and a file called `environment.yml`, which includes the instructions to install the environment. 
@@ -77,7 +77,7 @@ __2.__ In the case of the __'Current'__ output directory, the extracted contents
 
 __3.__ Lastly, if for any reason the main module is ran more than once a month, all downloaded files with the same name in both the __'YYYY_MM'__ and __'Current'__  output directories will be overwritten.
 
-In short, __*every month*__, we want to __*archive*__ the previous months __*unextracted*__ zipped files in a __*YYYY_MM*__ output directory, and we want to __*overwrite*__ the __*extracted*___ contents in the __'Current'__ output directory.
+In short, __*every month*__, we want to __*archive*__ the previous months __*unextracted*__ zipped files in a __*YYYY_MM*__ output directory, and we want to __*overwrite*__ the __*extracted*__ contents in the __'Current'__ output directory.
 
 This might not be very clear now, but it will make more sense after we review the entire program's functionality below. 
 
