@@ -30,7 +30,7 @@ __1.__ Download `automate-sangis-python` repository (ZIP) to your preferred dire
 
 __2.__ Open the Anaconda Terminal on your computer.
 
-__3.__ In the Terminal, set your directory using cd to change directories (e.g., `C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main`). 
+__3.__ In the Terminal, set your directory using cd to change directories (e.g., ` cd C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main`). 
 
 __4.__ Once you are in the directory, you can create your environment. To do this run: 
 `conda env create -f environment.yml`. 
