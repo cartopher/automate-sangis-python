@@ -11,6 +11,8 @@ twill’s Python API (https://twill-tools.github.io/twill/python-api.html#python
 
 ## Installation
 
+In this documentation, I am walking you through how to configure and run this project using PyCharm IDE. I will add more walkthroughs using Jupyter Notebooks and Virtual Studio Code later and will provide links for those walkthroughs here.
+
 *__Important Note__: When you download, extract, and open this repository in PyCharm, PyCharm may read the 'environment.yml' file and prompt you to create the Conda environment as well as add and apply the interpreter configurations for you. If this is the case, you can skip steps 2-7 of the installation process below, as well as the __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section.
 
 In this section, you will learn how to install a conda environment from a .yml file that contains a list of desired Python packages.
@@ -84,8 +86,6 @@ In short, __*every month*__, we want to __*archive*__ the previous months __*une
 This might not be very clear now, but it will make more sense after we review the entire program's functionality below. 
 
 ## Getting Set Up using PyCharm
-
-In this demonstration, I am walking you through how to configure and run this project using PyCharm. I will add more walkthroughs using Jupyter Notebooks and Virtual Studio Code later and will provide links for those walkthroughs here.
 
 __1.__ Navigate to the directory where you saved and extracted the repository and open the `automate-sangis-python-main` as a new project in PyCharm.
 - The next step is to __Add a New Python Intrepreter__ for this project. 
