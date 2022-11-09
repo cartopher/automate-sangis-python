@@ -11,7 +11,9 @@ twill’s Python API (https://twill-tools.github.io/twill/python-api.html#python
 
 ## Installation
 
-You will learn how to install a conda environment from a .yml file that contains a list of desired Python packages.
+*__Important Note__: When you download, extract, and open this repository in PyCharm, PyCharm may read the 'environment.yml' file and prompt you to create the Conda environment as well as add and apply the interpreter configurations for you. If this is the case, you can skip steps 2-7 of the installation process below, as well as the __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section.
+
+In this section, you will learn how to install a conda environment from a .yml file that contains a list of desired Python packages.
 
 *__Note__: If you prefer to use an existing virtual environment, all you need to do is run the ‘pip install twill’ command.*
 
@@ -26,7 +28,7 @@ conda list
 To download the `automate-sangis-python` repository and install the `downloadsangis` environment, you will need to follow these steps: 
 
 __1.__ Download `automate-sangis-python` repository (ZIP) to your preferred directory and extract its contents. 
-- This repository contains all the modules to run the automation process and a file called `environment.yml`, which includes the instructions to install the environment. 
+- This repository contains all the modules to run the automation process, in addition to a file called `environment.yml`, which contains a list of required packages and dependencies that are all installed during the environment creation process, as described below.
 
 __2.__ Open the Anaconda Terminal on your computer.
 - To create the environment required to run this project, you must set your directory to where you downloaded the `automate-sangis-python` project using cd to change directories. 
@@ -120,7 +122,9 @@ password = 'INPUT PASSWORD'
 ````
 
 __10.__ Next, open the `sangis_download.py` module and analyze the code. 
-- Refer to the documentation below to help guide your understanding of the main module's logic. 
+- Refer to the section below to help guide your understanding of the main module's logic. 
+
+## Script Overview
 
 ### Important Imports
 *__Notice__: the bottom import is called `sangis_credentials`; this is the name of the Python file that contains our login credentials for accessing the SanGIS/SANDAG GIS Data Warehouse website. Importing the module allows us to access and use those variables in our main module. We carry out this process in the `login_credentials()` method below.*
