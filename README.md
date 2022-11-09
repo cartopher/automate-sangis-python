@@ -110,7 +110,7 @@ __Important:__ It is recommended that you use Python versions 3.7-3.10 to execut
 __8.__ Press __'OK'__ to apply these settings. 
 
 - It may take a moment for PyCharm to apply add the new intrepreter. 
-- 
+
 __9.__ Open the `sangis_credentials.py` Python file (located on the left of the PyCharm screen) and input your username and password used to access the SanGIS/SANDAG GIS Data Warehouse website. See below: 
 
 ````
@@ -121,3 +121,19 @@ password = 'INPUT PASSWORD'
 
 __10.__ Next, open the `sangis_download.py` module and analyze the code. 
 - Refer to the documentation below to help guide your understanding of the main module's logic. 
+
+### Important Imports
+*__Notice__: the bottom import is called `sangis_credentials`; this is the name of the Python file that contains our login credentials for accessing the SanGIS/SANDAG GIS Data Warehouse website. Importing the module allows us to access and use those variables in our main module. We carry out this process in the `login_credentials()` method below.*
+
+````
+# import packages
+import os
+import time
+import zipfile
+from twill.commands import *
+from twill import browser
+
+# import sangis_credentials.py module
+import sangis_credentials
+````
+
