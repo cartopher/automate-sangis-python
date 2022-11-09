@@ -46,10 +46,50 @@ __6.__ Once the environment is installed, you can activate it by running: `conda
 __7.__ View a list of all Python packages installed in this environment, run: `conda list`.
 
 __8.__ Navigate to the directory where you saved and extracted the repository and open the `automate-sangis-python-main` as a new project in PyCharm.
-*__Important Note__: After opening the project in PyCharm, you may be immediately prompted to add `sangisdownload` as your project intrepreter. 
 
-After you file and prompt you to create the Conda environment as well as add and apply the interpreter configurations for you. If this is the case, you can skip steps 2-7 of the installation process below, as well as the __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section.
-Upon completing the following steps, you have successfully downloaded the entire repository and created an environment containing the `twill` package and all of its dependencies required to execute the code successfully. 
+*__Important Note__: After opening the project in PyCharm, a pop-up message on the lower right corner of the screen notifies you that "__Python 3.# (sangisdownload) has been configured as a project interpreter"__.  If this is the case, you can skip the entire __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section. 
+
+__9.__ Open the `sangis_credentials.py` Python file (located on the left of the PyCharm screen) and input your username and password used to access the SanGIS/SANDAG GIS Data Warehouse website. See below: 
+
+````
+# Store credentials into string variables,
+username = 'INPUT EMAIL'
+password = 'INPUT PASSWORD'
+````
+
+__10.__ Next, open the `sangis_download.py` module and analyze the code. 
+- Refer to the __Script Overview__ section to help guide your understanding of the main module's logic. 
+
+Upon completing of the steps above, you have successfully downloaded the entire project repository, created a environment and installed all required packages, and opened the project with all the correct configurations. If you need to manually add configure the project interpreter, proceed to the __'Getting Set Up using PyCharm'__ section and follow the instructions. 
+
+## Getting Set Up using PyCharm
+
+The next step is to __Add a New Python Intrepreter__ for this project. 
+
+__1.__ On the lower right corner of your PyCharm screen, click where it says __'Python 3.# (base)'__, to open a drop down menu and select __'Add New Intrepreter'__, and then select __'Add Local Intrepreter...'__. 
+- The window for __'Add Python Interpreter'__ will pop up and you will see a list of Intrepreters/Environments on the left. 
+
+__2.__ Select `Conda Environment` and  list of configuration options will appear. 
+
+__3.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting and a dropdown menu appears. 
+
+- The window for __'Add Python Interpreter'__ will pop up, and you will notice a list of Interpreters/Environments on the left. 
+
+__4.__ Select `Conda Environment`, and list of configuration options will appear. 
+
+__5.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting, and a dropdown menu appears. 
+
+__6.__ Locate the environment you created for this project (`sangisdownload`) and select it. 
+
+- Leave all the other settings as default unless you want to specify your __'Python version'__ for this project. 
+
+__Important:__ It is recommended that you use Python versions 3.7-3.10 to execute this project successfully. 
+
+__7.__ Press __'OK'__ to apply these settings. 
+
+- It may take a moment for PyCharm to apply the new intrepreter. 
+
+Now that you are all set up to run the code, take time and familiarize yourself with the project and its contents in the final two sections below.
 
 ## Package Overview
 
@@ -74,9 +114,7 @@ Upon completing the following steps, you have successfully downloaded the entire
 | `YYYY_MM`  | A generated subdirectory, and the download working directory for unextracted zipped files |  
 | `Current` | A generated subdirectory, and the download working directory for extracted zipped files |  
   
-  
 __Important__: There are a few instances you should keep in mind about the child output directories.  
-  
   
 __1.__ The "date-stamped" output directory is generated and named after the year and month in which the main module is executed (for example, `2022_09`), this means a new date-stamped output directory will be created and named after every month.
 
@@ -87,45 +125,6 @@ __3.__ Lastly, if for any reason the main module is ran more than once a month, 
 In short, __*every month*__, we want to __*archive*__ the previous months __*unextracted*__ zipped files in a `YYYY_MM` output directory, and we want to __*overwrite*__ the __*extracted*__ contents in the `Current` output directory.
 
 This might not be very clear now, but it will make more sense after we review the entire program's functionality below. 
-
-## Getting Set Up using PyCharm
-
-
-- The next step is to __Add a New Python Intrepreter__ for this project. 
-
-__2.__ On the lower right corner of your PyCharm screen, click where it says __'Python 3.# (base)'__, to open a drop down menu and select __'Add New Intrepreter'__, and then select __'Add Local Intrepreter...'__. 
-- The window for __'Add Python Interpreter'__ will pop up and you will see a list of Intrepreters/Environments on the left. 
-
-__3.__ Select `Conda Environment` and  list of configuration options will appear. 
-
-__4.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting and a dropdown menu appears. 
-
-- The window for __'Add Python Interpreter'__ will pop up, and you will notice a list of Interpreters/Environments on the left. 
-
-__5.__ Select `Conda Environment`, and list of configuration options will appear. 
-
-__6.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting, and a dropdown menu appears. 
-
-__7.__ Locate the environment you created for this project (`sangisdownload`) and select it. 
-
-- Leave all the other settings as default unless you want to specify your __'Python version'__ for this project. 
-
-__Important:__ It is recommended that you use Python versions 3.7-3.10 to execute this project successfully. 
-
-__8.__ Press __'OK'__ to apply these settings. 
-
-- It may take a moment for PyCharm to apply add the new intrepreter. 
-
-__9.__ Open the `sangis_credentials.py` Python file (located on the left of the PyCharm screen) and input your username and password used to access the SanGIS/SANDAG GIS Data Warehouse website. See below: 
-
-````
-# Store credentials into string variables,
-username = 'INPUT EMAIL'
-password = 'INPUT PASSWORD'
-````
-
-__10.__ Next, open the `sangis_download.py` module and analyze the code. 
-- Refer to the section below to help guide your understanding of the main module's logic. 
 
 ## Script Overview
 
