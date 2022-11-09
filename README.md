@@ -60,7 +60,7 @@ password = 'INPUT PASSWORD'
 __10.__ Next, open the `sangis_download.py` module and analyze the code. 
 - Refer to the __Script Overview__ section to help guide your understanding of the main module's logic. 
 
-Upon completing of the steps above, you have successfully downloaded the entire project repository, created a environment and installed all required packages, and opened the project with all the correct configurations. If you need to manually add configure the project interpreter, proceed to the __'Getting Set Up using PyCharm'__ section and follow the instructions. 
+Upon completing of the steps above, you have successfully downloaded the entire project repository, created a environment and installed all required packages, and opened the project with all the correct configurations. If you need to manually add the project interpreter, proceed to the __'Getting Set Up using PyCharm'__ section and follow the instructions. 
 
 ## Getting Set Up using PyCharm
 
