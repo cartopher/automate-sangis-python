@@ -81,3 +81,29 @@ In short, __*every month*__, we want to __*archive*__ the previous months __*une
 
 This might not be very clear now, but it will make more sense after we review the entire program's functionality below. 
 
+## Getting Set Up using PyCharm
+
+In this demonstration, I am walking you through how to configure and run this project using PyCharm. I will add more walkthroughs using Jupyter Notebooks and Virtual Studio Code later and will provide links for those walkthroughs here.
+
+__1.__ Navigate to the directory where you saved and extracted the repository and open the `automate-sangis-python-main` as a new project in PyCharm.
+- The next step is to __Add a New Python Intrepreter__ for this project.
+__2.__ On the lower right corner of your PyCharm screen, click where it says __'Python 3.# (base)'__, to open a drop down menu and select __'Add New Intrepreter'__, and then select __'Add Local Intrepreter...'__.
+- The window for __'Add Python Interpreter'__ will pop up and you will see a list of Intrepreters/Environments on the left. 
+__3.__ Select `Conda Environment` and  list of configuration options will appear. 
+__4.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting and a dropdown menu appears.
+- The window for __'Add Python Interpreter'__ will pop up, and you will notice a list of Interpreters/Environments on the left. 
+__5.__ Select `Conda Environment`, and list of configuration options will appear. 
+__6.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting, and a dropdown menu appears.
+__7.__ Locate the environment you created for this project (`sangisdownload`) and select it.
+- Leave all the other settings as default unless you want to specify your __'Python version'__ for this project. 
+__Important:__ It is recommended that you use Python versions 3.7-3.10 to execute this project successfully.
+__8.__ Press __'OK'__ to apply these settings.
+- It may take a moment for PyCharm to apply add the new intrepreter. 
+__9.__ Open the `sangis_credentials.py` Python file (located on the left of the PyCharm screen) and input your username and password used to access the SanGIS/SANDAG GIS Data Warehouse website. See below:
+````
+# Store credentials into string variables,
+username = 'INPUT EMAIL'
+password = 'INPUT PASSWORD'
+````
+__10.__ Next, open the `sangis_download.py` module and analyze the code.
+- Refer to the documentation below to help guide your understanding of the main module's logic. 
