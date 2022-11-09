@@ -274,7 +274,7 @@ We Handle these Expections gracefully using Try and Exception Statements. For Ex
             return
 ````
 ### main() Method  
-We define the main method and use it to run each line serially from the top of the entire module.
+We define the main method and use it to run each line serially from the top of the entire module. 
 __Important:__ Be sure to modify the directory paths to reflect your own (e.g., `C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main\output\Parcels`). Failure to do so would raise an exception as it would return the following message __'Exception when trying to change directory.'__ and the code will not execute.
 ````
 def main():
