@@ -39,6 +39,7 @@ __3.__ In the Terminal, set your directory using cd to change directories (e.g.,
 
 __4.__ Once you are in the directory, you can create your environment. To do this run: 
 `conda env create -f environment.yml`. 
+- Note that it approximately 3 minutes to install all of the packages found in the `sangisdownload` environment as it needs to download and install each library.
 
 __5.__ Confirm the environment was created by printing a list of all conda environments available on your machine by running: `conda env list`. 
 
