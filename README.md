@@ -47,7 +47,7 @@ __7.__ View a list of all Python packages installed in this environment, run: `c
 
 __8.__ Navigate to the directory where you saved and extracted the repository and open the `automate-sangis-python-main` as a new project in PyCharm.
 
-*__Important Note__: After opening the project in PyCharm, a pop-up message on the lower right corner of the screen notifies you that "__Python 3.# (sangisdownload) has been configured as a project interpreter"__.  If this is the case, you can skip the entire __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section. 
+*__Important Note__: After opening the project in PyCharm, a pop-up message on the lower right corner of the screen notifies you that "__Python 3.# (sangisdownload) has been configured as a project interpreter"__.  If this is the case, you can skip the entire __'Getting Set Up with PyCharm'__ section and go straight to the __'Script Overview'__ section. 
 
 __9.__ Open the `sangis_credentials.py` Python file (located on the left of the PyCharm screen) and input your username and password used to access the SanGIS/SANDAG GIS Data Warehouse website. See below: 
 
@@ -60,36 +60,34 @@ password = 'INPUT PASSWORD'
 __10.__ Next, open the `sangis_download.py` module and analyze the code. 
 - Refer to the __Script Overview__ section to help guide your understanding of the main module's logic. 
 
-Upon completing of the steps above, you have successfully downloaded the entire project repository, created a environment and installed all required packages, and opened the project with all the correct configurations. If you need to manually add the project interpreter, proceed to the __'Getting Set Up using PyCharm'__ section and follow the instructions. 
+Upon completing the steps above, you have successfully downloaded the entire project repository, created an environment, installed all required packages, and opened the project with all the correct configurations. If, for any reason, you need to add the project interpreter manually, proceed to the __'Getting Set Up using PyCharm'__ section and follow the instructions. 
 
 ## Getting Set Up using PyCharm
 
 The next step is to __Add a New Python Intrepreter__ for this project. 
 
-__1.__ On the lower right corner of your PyCharm screen, click where it says __'Python 3.# (base)'__, to open a drop down menu and select __'Add New Intrepreter'__, and then select __'Add Local Intrepreter...'__. 
-- The window for __'Add Python Interpreter'__ will pop up and you will see a list of Intrepreters/Environments on the left. 
+__1.__ On the lower right corner of your PyCharm screen, click where it says __'Python 3.# (base)'__, to open a drop-down menu and select __'Add New Interpreter'__, and then select __'Add Local Intrepreter...'__. 
+- The window for __'Add Python Interpreter'__ will pop up and you will see a list of Interpreters/Environments on the left. 
 
-__2.__ Select `Conda Environment` and  list of configuration options will appear. 
+__2.__ Select `Conda Environment` and a list of configuration options will appear. 
 
-__3.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting and a dropdown menu appears. 
+__3.__ At the top of the list where it says __'Interpreter:'__, select the down arrow on the right of this setting and a dropdown menu appears. 
 
 - The window for __'Add Python Interpreter'__ will pop up, and you will notice a list of Interpreters/Environments on the left. 
 
-__4.__ Select `Conda Environment`, and list of configuration options will appear. 
+__4.__ At the top of the list where it says __'Interpreter:'__, select the down arrow on the right of this setting, and a dropdown menu appears. 
 
-__5.__ At the top of the list where it says __'Intrepreter:'__, select the down arrow on the right of this setting, and a dropdown menu appears. 
-
-__6.__ Locate the environment you created for this project (`sangisdownload`) and select it. 
+__5.__ Locate the environment you created for this project (`sangisdownload`) and select it. 
 
 - Leave all the other settings as default unless you want to specify your __'Python version'__ for this project. 
 
 __Important:__ It is recommended that you use Python versions 3.7-3.10 to execute this project successfully. 
 
-__7.__ Press __'OK'__ to apply these settings. 
+__6.__ Press __'OK'__ to apply these settings. 
 
-- It may take a moment for PyCharm to apply the new intrepreter. 
+- It may take a moment for PyCharm to apply the new Interpreter. 
 
-Now that you are all set up to run the code, take time and familiarize yourself with the project and its contents in the final two sections below.
+You are now ready to run the code. The following two sections will assist you in becoming acquainted with the entire project and its contents so that you have a better understanding of the overall workflow.
 
 ## Package Overview
 
@@ -129,7 +127,7 @@ This might not be very clear now, but it will make more sense after we review th
 ## Script Overview
 
 ### Important Imports
-*__Notice__: the bottom import is called `sangis_credentials`; this is the name of the Python file that contains our login credentials for accessing the SanGIS/SANDAG GIS Data Warehouse website. Importing the module allows us to access and use those variables in our main module. We carry out this process in the `login_credentials()` method below.*
+*__Notice__ the bottom import is called `sangis_credentials`; this is the name of the Python file that contains our login credentials for accessing the SanGIS/SANDAG GIS Data Warehouse website. Importing the module allows us to access and use those variables in our main module. We carry out this process in the `login_credentials()` method below.*
 
 ````
 # import packages
