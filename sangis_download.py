@@ -12,8 +12,8 @@ import sangis_credentials
 # method for accessing the SanGIS/SANDAG GIS Data Warehouse website
 def login_credentials():
     """Browses to data source website,
-         Call the 'sangis_credentials' module to input login credentials,"""
-    # Talk to the web browser directly,
+       Call the 'sangis_credentials' module to input login credentials,"""
+    # Talk to the web browser directly
     go('https://rdw.sandag.org/Account/Login')
     showforms()
 
@@ -42,8 +42,8 @@ class SanGISDownload:
 
     # create a class method for creating and structuring output subdirectories
     def change_directory(self):
-        """Creates "date-stamped" subdirectories
-           Changes the current working directory to output file path
+        """Creates "date-stamped" subdirectories,
+           Changes the current working directory to output file path,
            :current_month_folder: a Class Variable containing the file path to the date-stamped subdirectories"""
 
         # modify attribute properties
@@ -73,7 +73,7 @@ class SanGISDownload:
     # class Method downloading ZIP file(s)
     def process_download(self):
         """Browsing while logged in,
-           Initiatize the download process,"""
+           Initiatize the download process"""
 
         # navigate to the zip file download page
         go("gisdtview.aspx?dir=Parcel")
@@ -89,7 +89,7 @@ class SanGISDownload:
     # class Method to extract zip file(s)
     def extract_zipfile(self):
         """Creates a new folder directory specifically for extraction,
-              Extracts ZIP file contents to new directory """
+           Extracts ZIP file contents to new directory"""
         # pass filename with path to extract
         # open file using read permission that we want to extract it
         myzip = zipfile.ZipFile(
@@ -106,8 +106,8 @@ class SanGISDownload:
 
     # when an error occurs, this class method catches and handles the exception,
     def process_sangis(self):
-        """ try block: contains the code that may cause the exception.
-              except block: returns the exception that may be caused by the try block."""
+        """ try block: contains the code that may cause the exception,
+            except block: returns the exception that may be caused by the try block"""
         try:
             self.change_directory()
         except Exception as e:
