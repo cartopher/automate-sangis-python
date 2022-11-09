@@ -139,7 +139,7 @@ class SanGISDownload:
 
 # define the main method, so it runs each line serially from the top of the entire module
 def main():
-    directory1 = 'C:/Users/cchar/PycharmProjects/AutomateSanGIS/SanGISDownload/output/Parcels/'
+    directory1 = '{INPUT DIRECTORY PATH}'
     download1 = SanGISDownload(directory1, "Assessor_Book.zip")
     download1.process_sangis()
 
@@ -147,7 +147,7 @@ def main():
     print(directory1)
     print('Download 1: Complete!')
 
-    directory2 = 'C:/Users/cchar/PycharmProjects/AutomateSanGIS/SanGISDownload/output/Parcels/'
+    directory2 = '{INPUT DIRECTORY PATH}'
     download2 = SanGISDownload(directory2, "PARCELS_EAST.zip")
     download2.process_sangis()
 
