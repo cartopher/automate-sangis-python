@@ -243,8 +243,7 @@ Class Method for extracting ZIP file(s).
         print(self.filename)
 ````        
 ### process_sangis() Method  
-Here, we build a Class Method to Handle Exceptions (errors) that occur during our Runtime (execution) of the program.  
-We Handle these Expections gracefully using Try and Exception Statements. For Example, if the Try Block Raises an Exception, the Except Block will Return the Exception that may be caused by the Try Block.  
+Here, we build a Class Method to Handle Exceptions (errors) that occur during our Runtime (execution) of the program. We Handle these Expections gracefully using Try and Exception Statements. For Example, if the Try Block Raises an Exception, the Except Block will Return the Exception that may be caused by the Try Block.  
 ````
     def process_sangis(self):
         """ try block: contains the code that may cause the exception.
