@@ -13,8 +13,6 @@ twill’s Python API (https://twill-tools.github.io/twill/python-api.html#python
 
 In this documentation, I am walking you through how to configure and run this project using PyCharm IDE. I will add more walkthroughs using Jupyter Notebooks and Virtual Studio Code later and will provide links for those walkthroughs here.
 
-*__Important Note__: When you download, extract, and open this repository in PyCharm, PyCharm may read the 'environment.yml' file and prompt you to create the Conda environment as well as add and apply the interpreter configurations for you. If this is the case, you can skip steps 2-7 of the installation process below, as well as the __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section.
-
 In this section, you will learn how to install a conda environment from a .yml file that contains a list of desired Python packages.
 
 *__Note__: If you prefer to use an existing virtual environment, all you need to do is run the ‘pip install twill’ command.*
@@ -39,7 +37,7 @@ __3.__ In the Terminal, set your directory using cd to change directories (e.g.,
 
 __4.__ Once you are in the directory, you can create your environment. To do this run: 
 `conda env create -f environment.yml`. 
-- Note that it approximately 3 minutes to install all of the packages found in the `sangisdownload` environment as it needs to download and install each library.
+- This process will take no more than 3 minutes as all of the packages found in the `sangisdownload` environment need to be downloaded and installed.
 
 __5.__ Confirm the environment was created by printing a list of all conda environments available on your machine by running: `conda env list`. 
 
@@ -47,6 +45,10 @@ __6.__ Once the environment is installed, you can activate it by running: `conda
 
 __7.__ View a list of all Python packages installed in this environment, run: `conda list`.
 
+__8.__ Navigate to the directory where you saved and extracted the repository and open the `automate-sangis-python-main` as a new project in PyCharm.
+*__Important Note__: After opening the project in PyCharm, you may be immediately prompted to add `sangisdownload` as your project intrepreter. 
+
+After you file and prompt you to create the Conda environment as well as add and apply the interpreter configurations for you. If this is the case, you can skip steps 2-7 of the installation process below, as well as the __'Getting Set Up with PyCharm'__ section, and go straight to the __'Script Overview'__ section.
 Upon completing the following steps, you have successfully downloaded the entire repository and created an environment containing the `twill` package and all of its dependencies required to execute the code successfully. 
 
 ## Package Overview
@@ -88,7 +90,7 @@ This might not be very clear now, but it will make more sense after we review th
 
 ## Getting Set Up using PyCharm
 
-__1.__ Navigate to the directory where you saved and extracted the repository and open the `automate-sangis-python-main` as a new project in PyCharm.
+
 - The next step is to __Add a New Python Intrepreter__ for this project. 
 
 __2.__ On the lower right corner of your PyCharm screen, click where it says __'Python 3.# (base)'__, to open a drop down menu and select __'Add New Intrepreter'__, and then select __'Add Local Intrepreter...'__. 
