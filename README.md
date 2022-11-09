@@ -246,7 +246,7 @@ We Handle these Expections gracefully using Try and Exception Statements. For Ex
         """ try block: contains the code that may cause the exception.
               except block: returns the exception that may be caused by the try block."""
         try:
-            self.change_directory()
+            self.build_directory()
         except Exception as e:
             print("Exception when trying to change directory.")
             print(print(str(e)))
