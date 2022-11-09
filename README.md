@@ -135,5 +135,18 @@ from twill import browser
 
 # import sangis_credentials.py module
 import sangis_credentials
+
+# method for accessing the SanGIS/SANDAG GIS Data Warehouse website
+def login_credentials():
+    """Browses to data source website,
+         Call the 'sangis_credentials' module to input login credentials,"""
+    # Talk to the web browser directly,
+    go('https://rdw.sandag.org/Account/Login')
+    showforms()
+
+    # input login credentials
+    fv("1", "ctl00$MainContent$Email", sangis_credentials.username)
+    fv("1", "ctl00$MainContent$Password", sangis_credentials.password)
+    submit('0')
 ````
 
