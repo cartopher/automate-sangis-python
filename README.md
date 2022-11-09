@@ -142,7 +142,7 @@ import sangis_credentials
 
 def login_credentials():
     """Browses to data source website,
-         Call the 'sangis_credentials' module to input login credentials,"""
+       Call the 'sangis_credentials' module to input login credentials"""
     # Talk to the web browser directly,
     go('https://rdw.sandag.org/Account/Login')
     showforms()
@@ -163,8 +163,8 @@ class SanGISDownload:
     # create class constructor with two arguments
     def __init__(self, directory, filename):
         """SanGISDownload  Class Constructor,
-           :param self: pass 'self' to access variables coming from the constructor
-           :param directory: output file path (string)
+           :param self: pass 'self' to access variables coming from the constructor,
+           :param directory: output file path (string),
            :param filename: output filename(s) (string)"""
 
         # initialize class variables
@@ -176,8 +176,8 @@ Now that we have created our Class Constructor,, we are free to accesss and modi
 For out first Class Method, we will build out directories to ensure all ZIP files are downloaded and organized into specific output directories.
 ````
  def build_directory(self):
-        """Creates "date-stamped" subdirectories
-           Changes the current working directory to output file path
+        """Creates "date-stamped" subdirectories,
+           Changes the current working directory to output file path,
            :current_month_folder: a Class Variable containing the file path to the date-stamped subdirectories"""
 
         # modify attribute properties
@@ -209,7 +209,7 @@ Class Method for Downloading ZIP File(s).
 ````
     def process_download(self):
         """Browsing while logged in,
-           Initialize the download process,"""
+           Initialize the download process"""
 
         # navigate to the zip file download page
         go("gisdtview.aspx?dir=Parcel")
@@ -246,8 +246,8 @@ Class Method for extracting ZIP file(s).
 Here, we build a Class Method to Handle Exceptions (errors) that occur during our Runtime (execution) of the program. We Handle these Expections gracefully using Try and Exception Statements. For Example, if the Try Block Raises an Exception, the Except Block will Return the Exception that may be caused by the Try Block.  
 ````
     def process_sangis(self):
-        """ try block: contains the code that may cause the exception.
-              except block: returns the exception that may be caused by the try block."""
+        """try block: contains the code that may cause the exception,
+           except block: returns the exception that may be caused by the try block."""
         try:
             self.build_directory()
         except Exception as e:
