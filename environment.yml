@@ -28,4 +28,4 @@ dependencies:
     - requests==2.28.1
     - twill==3.0.2
     - urllib3==1.26.12
-prefix: C:\Anaconda\envs\sangisdownload
+prefix: 'C:\Anaconda\envs\sangisdownload'
