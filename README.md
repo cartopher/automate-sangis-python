@@ -136,7 +136,6 @@ from twill import browser
 # import sangis_credentials.py module
 import sangis_credentials
 
-# method for accessing the SanGIS/SANDAG GIS Data Warehouse website
 def login_credentials():
     """Browses to data source website,
          Call the 'sangis_credentials' module to input login credentials,"""
@@ -149,4 +148,156 @@ def login_credentials():
     fv("1", "ctl00$MainContent$Password", sangis_credentials.password)
     submit('0')
 ````
+### Class Object & Constructor Method  
+Create a SanGISDownload Class Object & Encapsulate all Methods and Variables.
+````
+class SanGISDownload:
+    directory = None
+    filename = None
+    current_month_folder = None
 
+    # create class constructor with two arguments
+    def __init__(self, directory, filename):
+        """SanGISDownload  Class Constructor,
+           :param self: pass 'self' to access variables coming from the constructor
+           :param directory: output file path (string)
+           :param filename: output filename(s) (string)"""
+
+        # initialize class variables
+        self.directory = directory
+        self.filename = filename
+````
+### build_directory() Method   
+Now that we have created our Class Constructor,, we are free to accesss and modify our Class Objects Attributes in our Methods.
+For out first Class Method, we will build out directories to ensure all ZIP files are downloaded and organized into specific output directories.
+````
+ def build_directory(self):
+        """Creates "date-stamped" subdirectories
+           Changes the current working directory to output file path
+           :current_month_folder: a Class Variable containing the file path to the date-stamped subdirectories"""
+
+        # modify attribute properties
+        directory_path = self.directory
+        # store the current year and month to a variable
+        current_month = time.strftime("%Y_%m")
+
+        # create a new directory (folder) if it does not already exist
+        if os.path.isdir(directory_path + current_month):
+            print("Directory already exists")
+        else:
+            print("Creating directory for you")
+            os.mkdir(directory_path + current_month)
+
+        # change the current working directory to the date-stamped subdirectory,
+        os.chdir(directory_path + current_month)
+
+        # assign the current working directory
+        directory = os.getcwd()
+
+        # reassign the current working directory to a class variable
+        self.current_month_folder = directory
+
+        # Print the new current working directory
+        print(directory)    
+````
+### process_download() Method  
+Class Method for Downloading ZIP File(s).
+````
+    def process_download(self):
+        """Browsing while logged in,
+           Initialize the download process,"""
+
+        # navigate to the zip file download page
+        go("gisdtview.aspx?dir=Parcel")
+        go("GetFSFile.aspx?dir=Parcel&Name=" + self.filename)
+
+        # create a file object,
+        # open file for writing in binary format,
+        # overwrite the file if it exists,
+        # if the file does not exist, create new file for writing
+        with open(self.filename, "wb") as bf:
+            bf.write(browser.dump)
+````
+### extract_zipfile() Method  
+Class Method for extracting ZIP file(s).
+````    
+    def extract_zipfile(self):
+        """Creates a new folder directory specifically for extraction,
+           Extracts ZIP file contents to new directory"""
+        # pass filename with path to extract
+        # open file using read permission that we want to extract it
+        myzip = zipfile.ZipFile(
+            self.current_month_folder + "\\" + self.filename, 'r')
+
+        # extract zip file contents to a new folder
+        myzip.extractall(self.directory + "Current")
+
+        # close the zip file
+        myzip.close()
+
+        # display the filename
+        print(self.filename)
+````        
+### process_sangis() Method  
+Here, we build a Class Method to Handle Exceptions (errors) that occur during our Runtime (execution) of the program.  
+We Handle these Expections gracefully using Try and Exception Statements. For Example, if the Try Block Raises an Exception, the Except Block will Return the Exception that may be caused by the Try Block.  
+````
+    def process_sangis(self):
+        """ try block: contains the code that may cause the exception.
+              except block: returns the exception that may be caused by the try block."""
+        try:
+            self.change_directory()
+        except Exception as e:
+            print("Exception when trying to change directory.")
+            print(print(str(e)))
+            return
+
+        try:
+            login_credentials()
+        except Exception as e:
+            print("Exception when trying to go to the specified URL.")
+            print(print(str(e)))
+            return
+
+        try:
+            self.process_download()
+        except Exception as e:
+            print("Exception when trying to download ZIP file.")
+            print(print(str(e)))
+            return
+
+        try:
+            self.extract_zipfile()
+        except Exception as e:
+            print("Exception when trying to extract ZIP file.")
+            print(print(str(e)))
+            return
+````
+### main() Method  
+We define the main method and use it to run each line serially from the top of the entire module.
+__Important:__ Be sure to modify the directory paths to reflect your own (e.g., `C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main\output\Parcels`). Failure to do so would raise an exception as it would return the following message __'Exception when trying to change directory.'__ and the code will not execute.
+````
+def main():
+    directory1 = '{INPUT DIRECTORY PATH}'
+    download1 = SanGISDownload(directory1, "Assessor_Book.zip")
+    download1.process_sangis()
+
+    # display the first directory
+    print(directory1)
+    print('Download 1: Complete!')
+
+    directory2 = '{INPUT DIRECTORY PATH}'
+    download2 = SanGISDownload(directory2, "PARCELS_EAST.zip")
+    download2.process_sangis()
+
+    # display the second directory
+    print(directory2)
+    print("Download 2: Complete!")
+
+
+if __name__ == '__main__':
+    main()
+````
+
+## Conclusion
+We conclude this demonstration by running the program to see that we've successfully downloaded and extracted two ZIP files ('Assessor_Book.zip,' and PARCELS_EAST.zip) into our preferred file locations on our operating system.  
