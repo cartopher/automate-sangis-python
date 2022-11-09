@@ -35,7 +35,7 @@ __1.__ Download `automate-sangis-python` repository (ZIP) to your preferred dire
 __2.__ Open the Anaconda Terminal on your computer.
 - To create the environment required to run this project, you must set your directory to where you downloaded the `automate-sangis-python` project using cd to change directories. 
 
-__3.__ In the Terminal, set your directory using cd to change directories (e.g., ` cd C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main`). 
+__3.__ In the Terminal, set your directory using cd to change directories (e.g., ` cd C:\Users\name\PycharmProjects\automate-sangis-python-main`). 
 
 __4.__ Once you are in the directory, you can create your environment. To do this run: 
 `conda env create -f environment.yml`. 
@@ -279,7 +279,7 @@ Here, we build a Class Method to Handle Exceptions (errors) that occur during ou
 ### main() Method  
 We define the main method and use it to run each line serially from the top of the entire module.  
 
-__Important:__ Be sure to modify the directory paths to reflect your own (e.g., `C:\Users\name\PycharmProjects\automate-sangis-python-main\automate-sangis-python-main\output\Parcels`). Failure to do so would raise an exception as it would return the following message __'Exception when trying to change directory.'__ and the code will not execute.
+__Important:__ Be sure to modify the directory paths to reflect your own (e.g., `C:\Users\name\PycharmProjects\automate-sangis-python-main\output\Parcels`). Failure to do so would raise an exception as it would return the following message __'Exception when trying to change directory.'__ and the code will not execute.
 ````
 def main():
     directory1 = '{INPUT DIRECTORY PATH}'
