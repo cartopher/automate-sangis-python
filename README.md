@@ -52,7 +52,7 @@ __8.__ Navigate to the directory where you saved and extracted the repository an
 __9.__ Open the `sangis_credentials.py` Python file (located on the left of the PyCharm screen) and input your username and password used to access the SanGIS/SANDAG GIS Data Warehouse website. See below: 
 
 ````
-# Store credentials into string variables,
+# Store credentials into string variables
 username = 'INPUT EMAIL'
 password = 'INPUT PASSWORD'
 ````
