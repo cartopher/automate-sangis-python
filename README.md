@@ -2,7 +2,7 @@
 The python script uses the twill package to programmatically access and download large GIS datasets from a website. The script also automatically organizes the downloaded files and stores them in a specified directory structure, this way the files can be easily located and the code is reproducible. 
 
 ### Overview of twill's Python API ###  
-The Python package twill, is based on `requests` and `lxml` packages and is described as a simplified scripting language developed for programmatic or automated website navigation through a command-line interface. You may use twill to navigate websites that employ forms, cookies, and other standard Web features. Moreover, twill provides excellent support for both MySQL and PostgreSQL database management tasks.
+Twill is a Python package that provides a simple web browsing API. It allows developers to automate web browsing tasks, such as filling out forms, navigating through pages, and submitting requests. Twill is typically used to automate the process of scraping data from web pages, testing web applications, and automating the process of downloading data from a data warehouse.
 
 ## Installation
 
