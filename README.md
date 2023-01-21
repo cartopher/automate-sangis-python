@@ -5,10 +5,7 @@ The python script uses the twill package to programmatically access and download
 Twill is a Python package that provides a simple web browsing API. It allows developers to automate web browsing tasks, such as filling out forms, navigating through pages, and submitting requests. Twill is typically used to automate the process of scraping data from web pages, testing web applications, and automating the process of downloading data from a data warehouse.
 
 ## Installation
-
-In this documentation, I am walking you through how to configure and run this project using PyCharm IDE. I will add more walkthroughs using Jupyter Notebooks and Virtual Studio Code later and will provide links for those walkthroughs here.
-
-In this section, you will learn how to install a conda environment from a .yml file that contains a list of desired Python packages.
+In this guide, I will be providing instructions on how to set up and run this project using the PyCharm IDE. Additional tutorials using Jupyter Notebooks and Virtual Studio Code will be added at a later time, and links to those guides will be provided here. In the following section, you will learn how to create a conda environment by installing the necessary packages listed in a .yml file.
 
 *__Note__: If you prefer to use an existing virtual environment, all you need to do is run the ‘pip install twill’ command.*
 
